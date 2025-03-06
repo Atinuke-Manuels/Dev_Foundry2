@@ -4,6 +4,7 @@ import 'package:dev_foundry_task/ui_components/widgets/home_screen_widgets/small
 import 'package:flutter/material.dart';
 
 import '../../../constants/constants.dart';
+import 'dashed_divider.dart';
 
 class PackageDetailsTopCard extends StatelessWidget {
   const PackageDetailsTopCard({super.key});
@@ -32,6 +33,10 @@ class PackageDetailsTopCard extends StatelessWidget {
                   Text(strings.idNumber, style: TextStyle(fontSize: extraLargeFontSize),overflow: TextOverflow.ellipsis),
                 ],
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: DashedDivider(color: colorGrey),
             )
           ],
         ),
