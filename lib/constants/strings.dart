@@ -94,7 +94,7 @@ class AppStrings {
     };
 
     _localizedStrings = translations[locale.languageCode] ??
-        translations['fr']!; // Default to English
+        translations['en']!; // Default to English
   }
 
   // strings for home page

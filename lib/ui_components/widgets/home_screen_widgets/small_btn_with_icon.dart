@@ -5,13 +5,19 @@ import '../../../constants/strings.dart';
 
 class SmallBtnWithIcon extends StatelessWidget {
   final String title;
+  final IconData? icon;
   final Function()? onTap;
+  final Color textColor;
+  final Color btnColor;
 
   const SmallBtnWithIcon({
     super.key,
     required this.strings,
     required this.title,
+    this.icon,
     this.onTap,
+    this.textColor = bottomTabActiveColor,
+    this.btnColor = smallBtnColor,
   });
 
   final AppStrings strings;
@@ -23,7 +29,7 @@ class SmallBtnWithIcon extends StatelessWidget {
         height: 25,
         child: TextButton(
           style: TextButton.styleFrom(
-            backgroundColor: smallBtnColor,
+            backgroundColor: btnColor,
             padding: EdgeInsets.symmetric(horizontal: 8), // Adjust for responsiveness
           ),
           onPressed: onTap,
@@ -34,10 +40,10 @@ class SmallBtnWithIcon extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: TextStyle(color: bottomTabActiveColor, fontSize: tinyFontSize),
+                style: TextStyle(color: textColor, fontSize: tinyFontSize),
                 overflow: TextOverflow.ellipsis,
               ),
-              Icon(Icons.chevron_right, color: bottomTabActiveColor),
+              Icon(icon, color: bottomTabActiveColor),
             ],
           ),
         ),

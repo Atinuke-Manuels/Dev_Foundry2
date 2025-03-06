@@ -3,6 +3,7 @@ import 'package:dev_foundry_task/ui_components/widgets/package_detaila_widgets/p
 import 'package:flutter/material.dart';
 
 import '../../constants/strings.dart';
+import '../widgets/package_detaila_widgets/package_details_top_card.dart';
 
 class PackageDetailsScreen extends StatelessWidget {
   const PackageDetailsScreen({super.key});
@@ -15,6 +16,12 @@ class PackageDetailsScreen extends StatelessWidget {
       appBar: PackageDetailsAppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+        child: ListView(
+          children: [
+            SizedBox(height: spacing),
+            PackageDetailsTopCard(),
+          ],
+        ),
       ),
     );
   }

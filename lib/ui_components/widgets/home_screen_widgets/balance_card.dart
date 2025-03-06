@@ -35,7 +35,7 @@ class BalanceCard extends StatelessWidget {
                     ],
                   )
                 ),
-                SmallBtnWithIcon(strings: strings, title: strings.topUpBtn,),
+                SmallBtnWithIcon(strings: strings, title: strings.topUpBtn, icon: Icons.chevron_right,),
               ],
             ),
             SizedBox(height: spacing),

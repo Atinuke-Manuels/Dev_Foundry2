@@ -21,6 +21,7 @@ class CurrentTrackingWidget extends StatelessWidget {
         SmallBtnWithIcon(
           strings: strings,
           title: strings.seeAllText,
+          icon: Icons.chevron_right,
         ),
       ],
     );
