@@ -26,38 +26,38 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with 
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.4,
+      height: screenHeight > 640 ? screenHeight * 0.4 : screenHeight * 0.75,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Custom Tab Bar
-          Container(
-            alignment: Alignment.topLeft,
-            child: TabBar(
-              controller: _tabController,
-              isScrollable: true,
-              indicator: const BoxDecoration(),
+          TabBar(
+            controller: _tabController,
+            isScrollable: false,
+            indicator: const BoxDecoration(),
 
-              dividerColor: Colors.transparent,
+            dividerColor: Colors.transparent,
 
-              labelPadding: const EdgeInsets.symmetric(horizontal: 8),
+            labelPadding: const EdgeInsets.symmetric(horizontal: 2),
 
-              indicatorSize: TabBarIndicatorSize.label,
-              indicatorPadding: EdgeInsets.zero,
-              indicatorWeight: 0,
+            indicatorSize: TabBarIndicatorSize.label,
+            indicatorPadding: EdgeInsets.zero,
+            indicatorWeight: 0,
 
-              indicatorColor: Colors.transparent,
-              tabs: [
-                _buildTab('All', 0),
-                _buildTab('Completed', 1),
-                _buildTab('In Delivery', 2),
-                _buildTab('Pending', 3),
-              ],
-              onTap: (index) {
-                setState(() {});
-              },
-            ),
+            indicatorColor: Colors.transparent,
+            tabs: [
+              _buildTab('All', 0),
+              _buildTab('Completed', 1),
+              _buildTab('In Delivery', 2),
+              _buildTab('Pending', 3),
+            ],
+            onTap: (index) {
+              setState(() {});
+            },
           ),
 
           SizedBox(height: spacing,),
@@ -79,10 +79,11 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with 
   }
 
   Widget _buildTab(String text, int index) {
+    final screenWidth = MediaQuery.of(context).size.width;
     bool isSelected = _tabController.index == index;
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 3),
+      padding: screenWidth < 640 ? const EdgeInsets.symmetric(horizontal: 8, vertical: 3) : const EdgeInsets.symmetric(horizontal: 12, vertical: 3),
       decoration: BoxDecoration(
         color: isSelected ? bottomTabActiveColor: Colors.transparent,
         borderRadius: BorderRadius.circular(20),
@@ -96,7 +97,7 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with 
         style: TextStyle(
           color: isSelected ? scaffoldBackgroundColor : colorGrey,
           fontWeight: FontWeight.normal,
-          fontSize: smallFontSize
+          fontSize: screenWidth < 640 ? tinyFontSize : smallFontSize
         ),
       ),
     );
@@ -110,13 +111,4 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with 
       ),
     );
   }
-}
-
-Widget _buildTabContent(String content) {
-  return Center(
-    child: Text(
-      content,
-      style: const TextStyle(fontSize: 18),
-    ),
-  );
 }

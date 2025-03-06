@@ -13,7 +13,7 @@ class HomeScreenBottomCard extends StatelessWidget {
       color: lowerCardColor,
       elevation: 2,
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 12),
         child: Column(
           children: [
             CustomSearchBar(),
