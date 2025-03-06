@@ -23,14 +23,14 @@ class PackageTopCardListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 40,),
+      padding: const EdgeInsets.only(left: 20, right: 24,),
       child: ListTile(
         leading: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               leadingTitle,
-              style: TextStyle(color: greyTextColor, fontSize: tinyFontSize),
+              style: TextStyle(color: colorGrey, fontSize: tinyFontSize),
               overflow: TextOverflow.ellipsis,
             ),
             Text.rich(TextSpan(
@@ -49,7 +49,7 @@ class PackageTopCardListItem extends StatelessWidget {
           children: [
             Text(
               trailingTitle,
-              style: TextStyle(color: greyTextColor, fontSize: tinyFontSize),
+              style: TextStyle(color: colorGrey, fontSize: tinyFontSize),
               overflow: TextOverflow.ellipsis,
             ),
             Text.rich(
