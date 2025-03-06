@@ -20,14 +20,14 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(strings.homeAppBarText, style: TextStyle(fontSize: headerFontSize, fontWeight: FontWeight.bold),),
+            Text(strings.homeAppBarText, style: TextStyle(fontSize: headerFontSize, fontWeight: FontWeight.normal),),
             Row(
               spacing: 10,
               children: [
                 Text(
                   strings.homeAppBarSubText,
                   style:
-                  TextStyle(fontSize: smallFontSize, fontWeight: FontWeight.normal),
+                  TextStyle(fontSize: tinyFontSize, fontWeight: FontWeight.normal, color: colorGrey),
                 ),
                 Icon(Icons.keyboard_arrow_down)
               ],

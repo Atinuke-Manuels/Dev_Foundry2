@@ -26,3 +26,4 @@ const mediumFontSize = 14.0;
 const largeFontSize = 16.0;
 const headerFontSize = 20.0;
 const extraLargeFontSize = 24.0;
+const extraLargeHeaderFontSize = 36.0;

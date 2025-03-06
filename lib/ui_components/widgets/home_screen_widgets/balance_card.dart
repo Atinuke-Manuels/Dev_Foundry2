@@ -1,3 +1,4 @@
+import 'package:dev_foundry_task/ui_components/widgets/home_screen_widgets/small_btn_with_icon.dart';
 import 'package:flutter/material.dart';
 
 import 'package:dev_foundry_task/constants/constants.dart';
@@ -17,7 +18,7 @@ class BalanceCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(strings.yourBalance),
+            Text(strings.yourBalance, style: TextStyle(fontSize: smallFontSize),),
             SizedBox(height: smallSpacing),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -25,35 +26,16 @@ class BalanceCard extends StatelessWidget {
                 Text.rich(
                   TextSpan(
                     text: strings.balanceWholeNumber,
-                      style: TextStyle(fontSize: extraLargeFontSize, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: extraLargeHeaderFontSize, fontWeight: FontWeight.bold),
                     children: [
                       TextSpan(
                         text: strings.balanceDecimal, // Second part
-                        style: TextStyle(color: colorGrey, fontSize: extraLargeFontSize, fontWeight: FontWeight.bold),
+                        style: TextStyle(color: colorGrey, fontSize: extraLargeHeaderFontSize, fontWeight: FontWeight.bold),
                       ),
                     ],
                   )
                 ),
-                IntrinsicWidth(  // Ensures the button only takes required space
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                      backgroundColor: smallBtnColor,
-                      padding: EdgeInsets.symmetric(horizontal: 8), // Adjust for responsiveness
-                    ),
-                    onPressed: () {},
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min, // Ensures it doesn't take extra space
-                      children: [
-                        Text(
-                          strings.topUpBtn,
-                          style: TextStyle(color: bottomTabActiveColor, fontSize: smallFontSize),
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        Icon(Icons.chevron_right, color: bottomTabActiveColor),
-                      ],
-                    ),
-                  ),
-                ),
+                SmallBtnWithIcon(strings: strings, title: strings.topUpBtn,),
               ],
             ),
             SizedBox(height: spacing),
@@ -65,7 +47,7 @@ class BalanceCard extends StatelessWidget {
                 child: TextButton(
                   style: TextButton.styleFrom(
                     backgroundColor: smallBtnColor,
-                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 24),
+                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                   ),
                   onPressed: () {},
                   child: Row(
@@ -75,7 +57,7 @@ class BalanceCard extends StatelessWidget {
                       Icon(Icons.view_in_ar, color: bottomTabActiveColor),
                       Text(
                         strings.newTrackBtnText,
-                        style: TextStyle(color: colorBlack, fontSize: mediumFontSize),
+                        style: TextStyle(color: colorBlack, fontSize: smallFontSize),
                         overflow: TextOverflow.ellipsis,
                       ),
 
@@ -88,7 +70,7 @@ class BalanceCard extends StatelessWidget {
                   child: TextButton(
                     style: TextButton.styleFrom(
                       backgroundColor: smallBtnColor,
-                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 24),
+                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                     ),
                     onPressed: () {},
                     child: Row(
@@ -98,7 +80,7 @@ class BalanceCard extends StatelessWidget {
                         Icon(Icons.gite_rounded, color: bottomTabActiveColor),
                         Text(
                           strings.orderUsBtnText,
-                          style: TextStyle(color: colorBlack, fontSize: mediumFontSize),
+                          style: TextStyle(color: colorBlack, fontSize: smallFontSize),
                           overflow: TextOverflow.ellipsis,
                         ),
 
@@ -113,6 +95,8 @@ class BalanceCard extends StatelessWidget {
     );
   }
 }
+
+
 
 
 

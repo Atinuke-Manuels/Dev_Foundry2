@@ -29,10 +29,11 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with 
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.4,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Custom Tab Bar
           Container(
-            alignment: Alignment.centerLeft,
+            alignment: Alignment.topLeft,
             child: TabBar(
               controller: _tabController,
               isScrollable: true,

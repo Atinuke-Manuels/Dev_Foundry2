@@ -1,4 +1,5 @@
 import 'package:dev_foundry_task/constants/strings.dart';
+import 'package:dev_foundry_task/ui_components/widgets/home_screen_widgets/round_orange_clickable_icon.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/constants.dart';
@@ -34,23 +35,11 @@ class CustomSearchBar extends StatelessWidget {
           prefixIcon: const Icon(Icons.search, size: 21, color: greyTextColor,),
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 6), // Adjust the right padding as needed
-          child: GestureDetector(
-            onTap: () => {},
-            child: Container(
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: bottomTabActiveColor,
-                shape: BoxShape.circle,
-              ),
-              child: Icon(
-                Icons.swap_horiz,
-                color: scaffoldBackgroundColor,
-                size: 18,
-              ),
-            ),
-          ),
+          child: RoundOrangeClickableIcon(icon: Icons.swap_horiz,),
         ),
       ),
     );
   }
 }
+
+

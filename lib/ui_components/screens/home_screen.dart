@@ -20,12 +20,12 @@ class HomeScreen extends StatelessWidget {
       // backgroundColor: Colors.black,
       appBar: HomeAppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
         child: ListView(
           children: [
             SizedBox(height: spacing),
             BalanceCard(),
-            SizedBox(height: spacing),
+            SizedBox(height: bigSpacing),
             CurrentTrackingWidget(),
             SizedBox(height: spacing),
             HomeScreenBottomCard(), // No need for Expanded
