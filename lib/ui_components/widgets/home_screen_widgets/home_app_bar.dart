@@ -10,6 +10,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     final strings = AppStrings.of(context);
     return AppBar(
+      backgroundColor: scaffoldBackgroundColor,
       // backgroundColor: Colors.black,
       leading: Padding(
         padding: const EdgeInsets.only( top: 10, bottom: 10, left: 16),

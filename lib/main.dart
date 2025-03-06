@@ -1,6 +1,5 @@
 import 'package:dev_foundry_task/constants/constants.dart';
 import 'package:dev_foundry_task/ui_components/screens/bottom_nav.dart';
-import 'package:dev_foundry_task/ui_components/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'constants/strings.dart';
@@ -24,7 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       /// Use the app default locale
       supportedLocales: const [
-        Locale('en'),
+        // Locale('en'),
         Locale('es'),
         Locale('fr'),
       ],
@@ -49,7 +48,7 @@ class StringsDelegate extends LocalizationsDelegate<AppStrings> {
   @override
   Future<AppStrings> load(Locale locale) async {
     if (!isSupported(locale)) {
-      locale = const Locale('en'); // Default to English
+      locale = const Locale('fr'); // Default to English
     }
     await AppStrings.load(locale);
     return AppStrings();

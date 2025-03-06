@@ -1,4 +1,5 @@
 import 'package:dev_foundry_task/constants/constants.dart';
+import 'package:dev_foundry_task/constants/strings.dart';
 import 'package:dev_foundry_task/ui_components/widgets/home_screen_widgets/bottom_tab_all_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,7 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with 
 
   @override
   Widget build(BuildContext context) {
+    final strings = AppStrings();
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
 
@@ -50,10 +52,10 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with 
 
             indicatorColor: Colors.transparent,
             tabs: [
-              _buildTab('All', 0),
-              _buildTab('Completed', 1),
-              _buildTab('In Delivery', 2),
-              _buildTab('Pending', 3),
+              _buildTab(strings.homeTabBarText1, 0),
+              _buildTab(strings.homeTabBarText2, 1),
+              _buildTab(strings.homeTabBarText3, 2),
+              _buildTab(strings.homeTabBarText4, 3),
             ],
             onTap: (index) {
               setState(() {});
@@ -99,6 +101,7 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with 
           fontWeight: FontWeight.normal,
           fontSize: screenWidth < 640 ? tinyFontSize : smallFontSize
         ),
+        overflow: TextOverflow.ellipsis,
       ),
     );
   }
