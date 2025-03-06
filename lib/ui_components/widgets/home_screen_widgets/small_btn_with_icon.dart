@@ -43,7 +43,8 @@ class SmallBtnWithIcon extends StatelessWidget {
                 style: TextStyle(color: textColor, fontSize: tinyFontSize),
                 overflow: TextOverflow.ellipsis,
               ),
-              Icon(icon, color: bottomTabActiveColor),
+              if (icon != null)
+                Icon(icon, color: bottomTabActiveColor, size: 16),
             ],
           ),
         ),

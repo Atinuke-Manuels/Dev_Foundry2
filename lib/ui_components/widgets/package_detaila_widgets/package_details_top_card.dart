@@ -22,16 +22,16 @@ class PackageDetailsTopCard extends StatelessWidget {
               title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(strings.idNumberText, style: TextStyle(fontSize: smallFontSize),overflow: TextOverflow.ellipsis,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(strings.idNumberText, style: TextStyle(fontSize: smallFontSize),overflow: TextOverflow.ellipsis,),
+                      SmallBtnWithIcon(strings: strings, title: 'In transit', textColor: inTransitBtnTextColor, btnColor: inTransitBtnBackgroundColor),
+                    ],
+                  ),
                   Text(strings.idNumber, style: TextStyle(fontSize: extraLargeFontSize),overflow: TextOverflow.ellipsis),
                 ],
               ),
-              // trailing: Row(
-              //   crossAxisAlignment: CrossAxisAlignment.end,
-              //   children: [
-              //     // SmallBtnWithIcon(strings: strings, title: 'In transit', textColor: inTransitBtnTextColor, btnColor: inTransitBtnBackgroundColor,icon: Icons.add,),
-              //   ],
-              // ),
             )
           ],
         ),
