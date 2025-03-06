@@ -30,7 +30,13 @@ class AppStrings {
 
         /// package details screen
         'packageDetailsAppBarTitle': 'Package Details',
-
+        'from': 'From:',
+        'to': 'To:',
+        'shipperName': 'Shipper Name',
+        'recipientName': 'Recipient Name',
+        'deliveryType': 'Delivery Type',
+        'weight': 'Weight',
+        'regular': 'Regular',
 
       },
 
@@ -59,6 +65,14 @@ class AppStrings {
 
         /// package details screen
         'packageDetailsAppBarTitle': "Detalles del paquete",
+        "from": "De:",
+        "to": "Para:",
+        "shipperName": "Nombre del remitente",
+        "recipientName": "Nombre del destinatario",
+        "deliveryType": "Tipo de entrega",
+        "weight": "Peso",
+        "regular": "Regular"
+
 
 
       },
@@ -88,6 +102,14 @@ class AppStrings {
 
         /// package details screen
         'packageDetailsAppBarTitle': "Détails du colis",
+        "from": "De:",
+        "to": "À:",
+        "shipperName": "Nom de l'expéditeur",
+        "recipientName": "Nom du destinataire",
+        "deliveryType": "Type de livraison",
+        "weight": "Poids",
+        "regular": "Régulier"
+
 
 
       },
@@ -122,6 +144,13 @@ class AppStrings {
 
   /// package details screen
   String get packageDetailsAppBarTitle=> _localizedStrings['packageDetailsAppBarTitle']!;
+  String get from=> _localizedStrings['from']!;
+  String get to=> _localizedStrings['to']!;
+  String get shipperName=> _localizedStrings['shipperName']!;
+  String get recipientName=> _localizedStrings['recipientName']!;
+  String get deliveryType=> _localizedStrings['deliveryType']!;
+  String get weight=> _localizedStrings['weight']!;
+  String get regular=> _localizedStrings['regular']!;
 
 
   static AppStrings of(BuildContext context) {

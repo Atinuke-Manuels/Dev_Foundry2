@@ -12,7 +12,9 @@ class BottomTabAllWidget extends StatelessWidget {
     return Column(
       children: [
         BottomTabListItem(strings: strings),
-        SizedBox(height: smallSpacing,),
+        SizedBox(
+          height: smallSpacing,
+        ),
         BottomTabListItem(strings: strings),
       ],
     );
@@ -30,24 +32,61 @@ class BottomTabListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(Icons.fire_truck_outlined, size: 20,),
+      leading: CircleAvatar(
+          backgroundColor: scaffoldBackgroundColor,
+          child: Icon(
+            Icons.fire_truck_outlined,
+            size: 20,
+          )),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(strings.idNumberText, style: TextStyle(fontSize: smallFontSize),overflow: TextOverflow.ellipsis,),
-          Text(strings.idNumber, style: TextStyle(fontSize: extraLargeFontSize),overflow: TextOverflow.ellipsis),
-          Row(children: [
-            Icon(Icons.location_on_outlined, size: 14,),
-            Text(strings.locationText, style: TextStyle(fontSize: tinyFontSize),),
-            SizedBox(width: 8,),
-            Icon(Icons.arrow_forward, size: 16,),
-            SizedBox(width: 8,),
-            Icon(Icons.location_on_outlined, size: 14,),
-            Text(strings.locationSubText, style: TextStyle(fontSize: tinyFontSize),),
-          ],),
+          Text(
+            strings.idNumberText,
+            style: TextStyle(fontSize: smallFontSize),
+            overflow: TextOverflow.ellipsis,
+          ),
+          Text(strings.idNumber,
+              style: TextStyle(fontSize: extraLargeFontSize),
+              overflow: TextOverflow.ellipsis),
+          Row(
+            children: [
+              Icon(
+                Icons.location_on_outlined,
+                size: 14,
+              ),
+              Text(
+                strings.locationText,
+                style: TextStyle(fontSize: tinyFontSize),
+              ),
+              SizedBox(
+                width: 8,
+              ),
+              Icon(
+                Icons.arrow_forward,
+                size: 16,
+              ),
+              SizedBox(
+                width: 8,
+              ),
+              Icon(
+                Icons.location_on_outlined,
+                size: 14,
+              ),
+              Text(
+                strings.locationSubText,
+                style: TextStyle(fontSize: tinyFontSize),
+              ),
+            ],
+          ),
         ],
       ),
-      trailing: Icon(Icons.chevron_right, size: 30,),
+      trailing: CircleAvatar(
+          backgroundColor: scaffoldBackgroundColor,
+          child: Icon(
+            Icons.chevron_right,
+            size: 30,
+          )),
     );
   }
 }

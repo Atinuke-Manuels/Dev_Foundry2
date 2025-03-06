@@ -33,7 +33,9 @@ class BalanceCard extends StatelessWidget {
                         style: TextStyle(color: colorGrey, fontSize: extraLargeHeaderFontSize, fontWeight: FontWeight.bold),
                       ),
                     ],
-                  )
+                  ),
+                  maxLines: 1, // Limits text to 1 line
+                  overflow: TextOverflow.ellipsis,
                 ),
                 SmallBtnWithIcon(strings: strings, title: strings.topUpBtn, icon: Icons.chevron_right,),
               ],
