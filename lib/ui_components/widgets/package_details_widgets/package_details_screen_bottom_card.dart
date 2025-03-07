@@ -1,6 +1,7 @@
 import 'package:dev_foundry_task/constants/constants.dart';
 import 'package:dev_foundry_task/constants/strings.dart';
-import 'package:dev_foundry_task/ui_components/widgets/package_detaila_widgets/package_status_items.dart';
+
+import 'package:dev_foundry_task/ui_components/widgets/package_details_widgets/package_status_items.dart';
 import 'package:flutter/material.dart';
 
 import '../../../model/package_status_items.dart';

@@ -33,7 +33,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                   strings.homeAppBarSubText,
                   style: TextStyle(
                       fontSize: tinyFontSize,
-                      fontWeight: FontWeight.normal,
+                      fontWeight: FontWeight.bold,
                       color: colorGrey),
                 ),
                 Icon(Icons.keyboard_arrow_down)

@@ -1,7 +1,6 @@
 import 'package:dev_foundry_task/constants/strings.dart';
-import 'package:dev_foundry_task/ui_components/widgets/home_screen_widgets/round_orange_clickable_icon.dart';
-import 'package:dev_foundry_task/ui_components/widgets/home_screen_widgets/small_btn_with_icon.dart';
-import 'package:dev_foundry_task/ui_components/widgets/package_detaila_widgets/package_top_card_list_item.dart';
+import 'package:dev_foundry_task/ui_components/widgets/home_screen_widgets/round_orange_clickable_icon.dart';import 'package:dev_foundry_task/ui_components/widgets/home_screen_widgets/small_btn_with_icon.dart';
+import 'package:dev_foundry_task/ui_components/widgets/package_details_widgets/package_top_card_list_item.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/constants.dart';
@@ -14,6 +13,8 @@ class PackageDetailsTopCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final strings = AppStrings();
+    // Define spacing between list items
+    final double itemSpacing = 16.0;
 
     return Card(
       color: scaffoldBackgroundColor,
@@ -55,17 +56,21 @@ class PackageDetailsTopCard extends StatelessWidget {
               child: DashedDivider(color: colorGrey),
             ),
             Column(
-              children: packageDetails.map((details) {
-                return PackageTopCardListItem(
-                  leadingTitle: details['leadingTitle'] ?? '',
-                  leadingSubTitle: details['leadingSubTitle'] ?? '',
-                  leadingSubTitle2: details['leadingSubTitle2'] ?? '',
-                  trailingTitle: details['trailingTitle'] ?? '',
-                  trailingSubTitle: details['trailingSubTitle'] ?? '',
-                  trailingSubTitle2: details['trailingSubTitle2'] ?? '',
-                );
-              }).toList(),
-            )
+              children: [
+                for (int i = 0; i < packageDetails.length; i++) ...[
+                  PackageTopCardListItem(
+                    leadingTitle: packageDetails[i]['leadingTitle'] ?? '',
+                    leadingSubTitle: packageDetails[i]['leadingSubTitle'] ?? '',
+                    leadingSubTitle2: packageDetails[i]['leadingSubTitle2'] ?? '',
+                    trailingTitle: packageDetails[i]['trailingTitle'] ?? '',
+                    trailingSubTitle: packageDetails[i]['trailingSubTitle'] ?? '',
+                    trailingSubTitle2: packageDetails[i]['trailingSubTitle2'] ?? '',
+                  ),
+                  if (i < packageDetails.length - 1)
+                    SizedBox(height: itemSpacing),
+                ],
+              ],
+            ),
           ],
         ),
       ),

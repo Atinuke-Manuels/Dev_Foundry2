@@ -16,10 +16,12 @@ Widget buildStatusItem({
           Text(
             title,
             style: TextStyle(fontSize: smallFontSize, color: colorBlack),
+            overflow: TextOverflow.ellipsis,
           ),
           Text(
             time,
             style: TextStyle(fontSize: smallFontSize, color: colorBlack),
+            overflow: TextOverflow.ellipsis,
           ),
         ],
       ),
@@ -29,10 +31,12 @@ Widget buildStatusItem({
           Text(
             location,
             style: TextStyle(fontSize: tinyFontSize, color: colorGrey),
+            overflow: TextOverflow.ellipsis,
           ),
           Text(
             date,
             style: TextStyle(fontSize: tinyFontSize, color: colorGrey),
+            overflow: TextOverflow.ellipsis,
           ),
         ],
       ),

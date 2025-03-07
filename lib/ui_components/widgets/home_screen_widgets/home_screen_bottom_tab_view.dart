@@ -100,7 +100,7 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView>
         text,
         style: TextStyle(
             color: isSelected ? scaffoldBackgroundColor : colorGrey,
-            fontWeight: FontWeight.normal,
+            fontWeight: FontWeight.bold,
             fontSize: screenWidth < 640 ? tinyFontSize : smallFontSize),
         overflow: TextOverflow.ellipsis,
       ),

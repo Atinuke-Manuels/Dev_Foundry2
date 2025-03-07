@@ -31,14 +31,14 @@ class BalanceCard extends StatelessWidget {
                     text: strings.balanceWholeNumber,
                     style: TextStyle(
                         fontSize: extraLargeHeaderFontSize,
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.w400),
                     children: [
                       TextSpan(
                         text: strings.balanceDecimal, // Second part
                         style: TextStyle(
                             color: colorGrey,
                             fontSize: extraLargeHeaderFontSize,
-                            fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.w400),
                       ),
                     ],
                   ),

@@ -49,9 +49,9 @@ class PackageDetailsScreenMiddleCard extends StatelessWidget {
                       onPressed: () {},
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 10, horizontal: 14),
+                            vertical: 10, horizontal: 0),
                         child: Row(
-                          spacing: 5,
+                          spacing: 3,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(
@@ -59,12 +59,14 @@ class PackageDetailsScreenMiddleCard extends StatelessWidget {
                               color: colorBlack,
                               size: 20,
                             ),
-                            Text(
-                              strings.liveTrackingBtnText,
-                              style: TextStyle(
-                                  overflow: TextOverflow.ellipsis,
-                                  color: colorBlack,
-                                  fontSize: smallFontSize),
+                            Flexible(
+                              child: Text(
+                                strings.liveTrackingBtnText,
+                                style: TextStyle(
+                                    color: colorBlack,
+                                    fontSize: smallFontSize),
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             )
                           ],
                         ),

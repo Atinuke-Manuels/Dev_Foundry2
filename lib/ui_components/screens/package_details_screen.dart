@@ -1,11 +1,12 @@
 import 'package:dev_foundry_task/constants/constants.dart';
-import 'package:dev_foundry_task/ui_components/widgets/package_detaila_widgets/package_details_app_bar.dart';
-import 'package:dev_foundry_task/ui_components/widgets/package_detaila_widgets/package_details_screen_bottom_card.dart';
-import 'package:dev_foundry_task/ui_components/widgets/package_detaila_widgets/package_details_screen_middle_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/strings.dart';
-import '../widgets/package_detaila_widgets/package_details_top_card.dart';
+
+import '../widgets/package_details_widgets/package_details_app_bar.dart';
+import '../widgets/package_details_widgets/package_details_screen_bottom_card.dart';
+import '../widgets/package_details_widgets/package_details_screen_middle_card.dart';
+import '../widgets/package_details_widgets/package_details_top_card.dart';
 
 class PackageDetailsScreen extends StatelessWidget {
   const PackageDetailsScreen({super.key});

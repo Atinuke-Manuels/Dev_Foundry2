@@ -138,7 +138,7 @@ class AppStrings {
     };
 
     _localizedStrings = translations[locale.languageCode] ??
-        translations['en']!; // Default to English
+        translations['fr']!; // Default to English
   }
 
   // strings for home page
