@@ -24,6 +24,15 @@ Clone the repository:
 ```bash
 git clone https://github.com/Atinuke-Manuels/Dev_Foundry2.git
 ```
+
+## Setting up the Android Folder
+
+This project ignores the `android/` folder to avoid conflicts due to different Android Studio versions . To recreate it, run:
+
+```bash
+flutter create .
+```
+
 Run the app:
 ```bash
 flutter pub get
