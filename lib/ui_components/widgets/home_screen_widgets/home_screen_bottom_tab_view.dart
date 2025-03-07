@@ -34,7 +34,7 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView>
     final screenWidth = MediaQuery.of(context).size.width;
 
     return SizedBox(
-      height: screenHeight > 640 ? screenHeight * 0.4 : screenHeight * 0.75,
+      height: screenHeight > 640 ? screenHeight * 0.35 : screenHeight * 0.75,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

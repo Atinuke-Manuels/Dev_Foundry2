@@ -1,4 +1,4 @@
-## 📦 Package Tracking App
+## Package Tracking App
 
 A modern and minimalistic **package tracking app UI**, designed using **Flutter**. This project consists of two key screens:
 
@@ -17,13 +17,12 @@ A modern and minimalistic **package tracking app UI**, designed using **Flutter*
 - **Material Design**
 - **Custom UI Components**
 
-### Screenshots
-<img src="your-image-path.jpeg" width="600">  
+### Screenshots 
 
 ### Getting Started
 Clone the repository:
 ```bash
-git clone https://github.com/yourusername/package-tracking-app.git
+git clone https://github.com/Atinuke-Manuels/Dev_Foundry2.git
 ```
 Run the app:
 ```bash
@@ -32,4 +31,4 @@ flutter run
 ```
 
 ### Credits
-Developed by **Atinuke@developerfoundryfellow2025**.
+Developed by **Atinuke@developersfoundryfellow2025**.
