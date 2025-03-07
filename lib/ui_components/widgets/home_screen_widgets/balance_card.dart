@@ -12,7 +12,7 @@ class BalanceCard extends StatelessWidget {
     final strings = AppStrings.of(context);
     return Card(
       color: scaffoldBackgroundColor,
-      elevation: 3,
+      elevation: smallElevation,
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
@@ -106,6 +106,7 @@ class BalanceCard extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: spacing),
           ],
         ),
       ),

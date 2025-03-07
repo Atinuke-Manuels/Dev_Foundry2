@@ -16,6 +16,8 @@ const smallSpacing = 10.0;
 const spacing = 14.0;
 const bigSpacing = 28.0;
 
+const smallElevation = 0.45;
+
 const tinyFontSize = 10.0;
 const smallFontSize = 12.0;
 const mediumFontSize = 14.0;

@@ -13,7 +13,7 @@ class PackageDetailsScreenMiddleCard extends StatelessWidget {
 
     return Card(
       color: lowerCardColor,
-      elevation: 3,
+      elevation: smallElevation,
       child: Padding(
         padding:
             const EdgeInsets.only(left: 10, right: 10, top: 12, bottom: 12),

@@ -18,7 +18,7 @@ class PackageDetailsTopCard extends StatelessWidget {
 
     return Card(
       color: scaffoldBackgroundColor,
-      elevation: 3,
+      elevation: smallElevation,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 12),
         child: Column(

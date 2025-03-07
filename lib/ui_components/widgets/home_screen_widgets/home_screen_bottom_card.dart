@@ -11,7 +11,7 @@ class HomeScreenBottomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       color: lowerCardColor,
-      elevation: 2,
+      elevation: smallElevation,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 12),
         child: Column(
