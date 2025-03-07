@@ -1,5 +1,7 @@
 import 'package:dev_foundry_task/constants/constants.dart';
 import 'package:dev_foundry_task/ui_components/widgets/package_detaila_widgets/package_details_app_bar.dart';
+import 'package:dev_foundry_task/ui_components/widgets/package_detaila_widgets/package_details_screen_bottom_card.dart';
+import 'package:dev_foundry_task/ui_components/widgets/package_detaila_widgets/package_details_screen_middle_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/strings.dart';
@@ -18,8 +20,12 @@ class PackageDetailsScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
         child: ListView(
           children: [
-            SizedBox(height: spacing),
+            // SizedBox(height: spacing),
             PackageDetailsTopCard(),
+            SizedBox(height: bigSpacing,),
+            PackageDetailsScreenMiddleCard(),
+            SizedBox(height: spacing,),
+            PackageDetailsScreenBottomCard()
           ],
         ),
       ),

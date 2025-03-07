@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
         child: ListView(
           children: [
-            SizedBox(height: spacing),
+            // SizedBox(height: spacing),
             BalanceCard(),
             SizedBox(height: bigSpacing),
             CurrentTrackingWidget(),

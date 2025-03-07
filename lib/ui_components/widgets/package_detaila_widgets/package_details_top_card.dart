@@ -16,6 +16,8 @@ class PackageDetailsTopCard extends StatelessWidget {
     final strings = AppStrings();
 
     return Card(
+      color: scaffoldBackgroundColor,
+      elevation: 3,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 12),
         child: Column(
@@ -30,7 +32,7 @@ class PackageDetailsTopCard extends StatelessWidget {
                     children: [
                       Text(
                         strings.idNumberText,
-                        style: TextStyle(fontSize: smallFontSize),
+                        style: TextStyle(fontSize: smallFontSize, color: colorGrey),
                         overflow: TextOverflow.ellipsis,
                       ),
                       SmallBtnWithIcon(

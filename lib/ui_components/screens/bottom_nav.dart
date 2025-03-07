@@ -32,10 +32,12 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: _screens[_selectedIndex],
       bottomNavigationBar: Container(
-        height: MediaQuery.of(context).size.height*0.08,
+        height: screenHeight > 500 ? screenHeight*0.08 : screenHeight*0.18,
         margin: EdgeInsets.only(left: 50, right: 50, bottom: 20),
         decoration: BoxDecoration(
           color: Colors.white,

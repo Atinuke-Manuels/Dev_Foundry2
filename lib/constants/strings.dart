@@ -37,6 +37,16 @@ class AppStrings {
         'deliveryType': 'Delivery Type',
         'weight': 'Weight',
         'regular': 'Regular',
+        'stayUpdatedText': 'Stay updated with live tracking of your shipment\'s journey',
+        'liveTrackingBtnText': 'Live Tracking',
+        'detailsStatus': 'Details Status',
+        'transit': 'Transit',
+        'delivery': 'Delivery',
+        'arriveAtSortingCenter': 'Arrive at sorting center',
+        'barracksUnder': 'Barracks Under',
+        'requestPickUp': 'Request pick-up',
+        'deliveryStatusDate': '03 Mar. 2025',
+
 
       },
 
@@ -71,7 +81,18 @@ class AppStrings {
         "recipientName": "Nombre del destinatario",
         "deliveryType": "Tipo de entrega",
         "weight": "Peso",
-        "regular": "Regular"
+        "regular": "Regular",
+        'stayUpdatedText': 'Mantente actualizado con el seguimiento en vivo del recorrido de tu envío',
+        'liveTrackingBtnText': 'Seguimiento en vivo',
+        'detailsStatus': 'Estado de los detalles',
+        'transit': 'Tránsito',
+        'delivery': 'Entrega',
+        'arriveAtSortingCenter': 'Llegada al centro de clasificación',
+        'barracksUnder': 'Cuarteles bajo',
+        'requestPickUp': 'Solicitar recogida',
+        'deliveryStatusDate': '03 Mar. 2025',
+
+
 
 
 
@@ -108,7 +129,18 @@ class AppStrings {
         "recipientName": "Nom du destinataire",
         "deliveryType": "Type de livraison",
         "weight": "Poids",
-        "regular": "Régulier"
+        "regular": "Régulier",
+        'stayUpdatedText': 'Restez informé grâce au suivi en direct du parcours de votre envoi',
+        'liveTrackingBtnText': 'Suivi en direct',
+        'detailsStatus': 'Statut des détails',
+        'transit': 'Transit',
+        'delivery': 'Livraison',
+        'arriveAtSortingCenter': 'Arrivée au centre de tri',
+        'barracksUnder': 'Caserne sous',
+        'requestPickUp': 'Demander un ramassage',
+        'deliveryStatusDate': '03 Mar. 2025',
+
+
 
 
 
@@ -151,6 +183,15 @@ class AppStrings {
   String get deliveryType=> _localizedStrings['deliveryType']!;
   String get weight=> _localizedStrings['weight']!;
   String get regular=> _localizedStrings['regular']!;
+  String get stayUpdatedText=> _localizedStrings['stayUpdatedText']!;
+  String get liveTrackingBtnText=> _localizedStrings['liveTrackingBtnText']!;
+  String get detailsStatus=> _localizedStrings['detailsStatus']!;
+  String get transit=> _localizedStrings['transit']!;
+  String get delivery=> _localizedStrings['delivery']!;
+  String get arriveAtSortingCenter=> _localizedStrings['arriveAtSortingCenter']!;
+  String get barracksUnder=> _localizedStrings['barracksUnder']!;
+  String get requestPickUp=> _localizedStrings['requestPickUp']!;
+  String get deliveryStatusDate=> _localizedStrings['deliveryStatusDate']!;
 
 
   static AppStrings of(BuildContext context) {
