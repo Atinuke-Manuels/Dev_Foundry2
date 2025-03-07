@@ -3,7 +3,7 @@ import 'package:dev_foundry_task/constants/strings.dart';
 import 'package:dev_foundry_task/ui_components/widgets/package_detaila_widgets/package_status_items.dart';
 import 'package:flutter/material.dart';
 
-import '../../../data/package_status_items.dart';
+import '../../../model/package_status_items.dart';
 
 class PackageDetailsScreenBottomCard extends StatelessWidget {
   const PackageDetailsScreenBottomCard({super.key});

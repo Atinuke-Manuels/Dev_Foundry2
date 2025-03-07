@@ -5,7 +5,7 @@ import 'package:dev_foundry_task/ui_components/widgets/package_detaila_widgets/p
 import 'package:flutter/material.dart';
 
 import '../../../constants/constants.dart';
-import '../../../data/package_top_card_list_item_data.dart';
+import '../../../model/package_top_card_list_item_data.dart';
 import 'dashed_divider.dart';
 
 class PackageDetailsTopCard extends StatelessWidget {
