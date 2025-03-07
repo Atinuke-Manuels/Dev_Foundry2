@@ -1,6 +1,9 @@
 import 'package:dev_foundry_task/constants/constants.dart';
 import 'package:dev_foundry_task/constants/strings.dart';
+import 'package:dev_foundry_task/ui_components/widgets/package_detaila_widgets/package_status_items.dart';
 import 'package:flutter/material.dart';
+
+import '../../../data/package_status_items.dart';
 
 class PackageDetailsScreenBottomCard extends StatelessWidget {
   const PackageDetailsScreenBottomCard({super.key});
@@ -12,149 +15,36 @@ class PackageDetailsScreenBottomCard extends StatelessWidget {
     return Card(
       color: scaffoldBackgroundColor,
       child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
-            child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          strings.detailsStatus,
-          style: TextStyle(fontSize: mediumFontSize),
-          overflow: TextOverflow.ellipsis,
-        ),
-        SizedBox(
-          height: spacing,
-        ),
-        Column(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  strings.transit,
-                  style:
-                  TextStyle(fontSize: smallFontSize, color: colorBlack),
-                ),
-                Text(
-                  '07.00',
-                  style:
-                  TextStyle(fontSize: smallFontSize, color: colorBlack),
-                ),
-              ],
+            Text(
+              strings.detailsStatus,
+              style: TextStyle(fontSize: mediumFontSize),
+              overflow: TextOverflow.ellipsis,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  strings.locationText,
-                  style:
-                  TextStyle(fontSize: tinyFontSize, color: colorGrey),
-                ),
-                Text(
-                  strings.deliveryStatusDate,
-                  style:
-                  TextStyle(fontSize: tinyFontSize, color: colorGrey),
-                ),
-              ],
+            SizedBox(
+              height: spacing,
             ),
-            SizedBox(height: spacing,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  strings.delivery,
-                  style:
-                  TextStyle(fontSize: smallFontSize, color: colorBlack),
-                ),
-                Text(
-                  '19.30',
-                  style:
-                  TextStyle(fontSize: smallFontSize, color: colorBlack),
-                ),
+                for (final item in deliveryStatusItems) ...[
+                  buildStatusItem(
+                    title: item['title'] as String,
+                    time: item['time'] as String,
+                    location: item['location'] as String,
+                    date: item['date'] as String,
+                  ),
+                  if (item != deliveryStatusItems.last)
+                    SizedBox(height: spacing),
+                ]
               ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  strings.barracksUnder,
-                  style:
-                  TextStyle(fontSize: tinyFontSize, color: colorGrey),
-                ),
-                Text(
-                  strings.deliveryStatusDate,
-                  style:
-                  TextStyle(fontSize: tinyFontSize, color: colorGrey),
-                ),
-              ],
-            ),
-            SizedBox(height: spacing,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  strings.arriveAtSortingCenter,
-                  style:
-                  TextStyle(fontSize: smallFontSize, color: colorBlack),
-                ),
-                Text(
-                  '11.30',
-                  style:
-                  TextStyle(fontSize: smallFontSize, color: colorBlack),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  strings.barracksUnder,
-                  style:
-                  TextStyle(fontSize: tinyFontSize, color: colorGrey),
-                ),
-                Text(
-                  strings.deliveryStatusDate,
-                  style:
-                  TextStyle(fontSize: tinyFontSize, color: colorGrey),
-                ),
-              ],
-            ),
-            SizedBox(height: spacing,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  strings.requestPickUp,
-                  style:
-                  TextStyle(fontSize: smallFontSize, color: colorBlack),
-                ),
-                Text(
-                  '09.00',
-                  style:
-                  TextStyle(fontSize: smallFontSize, color: colorBlack),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  strings.barracksUnder,
-                  style:
-                  TextStyle(fontSize: tinyFontSize, color: colorGrey),
-                ),
-                Text(
-                  strings.deliveryStatusDate,
-                  style:
-                  TextStyle(fontSize: tinyFontSize, color: colorGrey),
-                ),
-              ],
-            ),
+            )
           ],
-        )
-      ],
-            ),
-          ),
+        ),
+      ),
     );
   }
 }

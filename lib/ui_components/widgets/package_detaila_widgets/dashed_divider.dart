@@ -20,7 +20,8 @@ class DashedDivider extends StatelessWidget {
       height: dashHeight,
       child: LayoutBuilder(
         builder: (context, constraints) {
-          final dashCount = (constraints.maxWidth / (dashWidth + dashSpacing)).floor();
+          final dashCount =
+              (constraints.maxWidth / (dashWidth + dashSpacing)).floor();
           return Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(dashCount, (index) {

@@ -7,10 +7,12 @@ class HomeScreenBottomTabView extends StatefulWidget {
   const HomeScreenBottomTabView({super.key});
 
   @override
-  State<HomeScreenBottomTabView> createState() => _HomeScreenBottomTabViewState();
+  State<HomeScreenBottomTabView> createState() =>
+      _HomeScreenBottomTabViewState();
 }
 
-class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with SingleTickerProviderStateMixin {
+class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -41,15 +43,11 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with 
             controller: _tabController,
             isScrollable: false,
             indicator: const BoxDecoration(),
-
             dividerColor: Colors.transparent,
-
             labelPadding: const EdgeInsets.symmetric(horizontal: 2),
-
             indicatorSize: TabBarIndicatorSize.label,
             indicatorPadding: EdgeInsets.zero,
             indicatorWeight: 0,
-
             indicatorColor: Colors.transparent,
             tabs: [
               _buildTab(strings.homeTabBarText1, 0),
@@ -62,7 +60,9 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with 
             },
           ),
 
-          SizedBox(height: spacing,),
+          SizedBox(
+            height: spacing,
+          ),
           // Important: Expanded to fill available space
           Expanded(
             child: TabBarView(
@@ -85,9 +85,11 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with 
     bool isSelected = _tabController.index == index;
 
     return Container(
-      padding: screenWidth < 640 ? const EdgeInsets.symmetric(horizontal: 8, vertical: 3) : const EdgeInsets.symmetric(horizontal: 12, vertical: 3),
+      padding: screenWidth < 640
+          ? const EdgeInsets.symmetric(horizontal: 8, vertical: 3)
+          : const EdgeInsets.symmetric(horizontal: 12, vertical: 3),
       decoration: BoxDecoration(
-        color: isSelected ? bottomTabActiveColor: Colors.transparent,
+        color: isSelected ? bottomTabActiveColor : Colors.transparent,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           color: isSelected ? Colors.transparent : greyTextColor,
@@ -97,10 +99,9 @@ class _HomeScreenBottomTabViewState extends State<HomeScreenBottomTabView> with 
       child: Text(
         text,
         style: TextStyle(
-          color: isSelected ? scaffoldBackgroundColor : colorGrey,
-          fontWeight: FontWeight.normal,
-          fontSize: screenWidth < 640 ? tinyFontSize : smallFontSize
-        ),
+            color: isSelected ? scaffoldBackgroundColor : colorGrey,
+            fontWeight: FontWeight.normal,
+            fontSize: screenWidth < 640 ? tinyFontSize : smallFontSize),
         overflow: TextOverflow.ellipsis,
       ),
     );

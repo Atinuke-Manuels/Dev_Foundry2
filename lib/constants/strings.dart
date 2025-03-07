@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 
-
 class AppStrings {
   static late Map<String, String> _localizedStrings;
 
@@ -37,7 +36,8 @@ class AppStrings {
         'deliveryType': 'Delivery Type',
         'weight': 'Weight',
         'regular': 'Regular',
-        'stayUpdatedText': 'Stay updated with live tracking of your shipment\'s journey',
+        'stayUpdatedText':
+            'Stay updated with live tracking of your shipment\'s journey',
         'liveTrackingBtnText': 'Live Tracking',
         'detailsStatus': 'Details Status',
         'transit': 'Transit',
@@ -46,8 +46,6 @@ class AppStrings {
         'barracksUnder': 'Barracks Under',
         'requestPickUp': 'Request pick-up',
         'deliveryStatusDate': '03 Mar. 2025',
-
-
       },
 
       /// spanish translation
@@ -82,7 +80,8 @@ class AppStrings {
         "deliveryType": "Tipo de entrega",
         "weight": "Peso",
         "regular": "Regular",
-        'stayUpdatedText': 'Mantente actualizado con el seguimiento en vivo del recorrido de tu envío',
+        'stayUpdatedText':
+            'Mantente actualizado con el seguimiento en vivo del recorrido de tu envío',
         'liveTrackingBtnText': 'Seguimiento en vivo',
         'detailsStatus': 'Estado de los detalles',
         'transit': 'Tránsito',
@@ -91,12 +90,8 @@ class AppStrings {
         'barracksUnder': 'Cuarteles bajo',
         'requestPickUp': 'Solicitar recogida',
         'deliveryStatusDate': '03 Mar. 2025',
-
-
-
-
-
       },
+
       /// french translation
       'fr': {
         // strings for home page
@@ -120,7 +115,6 @@ class AppStrings {
         'homeTabBarText3': 'En livraison',
         'homeTabBarText4': 'En attente',
 
-
         /// package details screen
         'packageDetailsAppBarTitle': "Détails du colis",
         "from": "De:",
@@ -130,7 +124,8 @@ class AppStrings {
         "deliveryType": "Type de livraison",
         "weight": "Poids",
         "regular": "Régulier",
-        'stayUpdatedText': 'Restez informé grâce au suivi en direct du parcours de votre envoi',
+        'stayUpdatedText':
+            'Restez informé grâce au suivi en direct du parcours de votre envoi',
         'liveTrackingBtnText': 'Suivi en direct',
         'detailsStatus': 'Statut des détails',
         'transit': 'Transit',
@@ -139,11 +134,6 @@ class AppStrings {
         'barracksUnder': 'Caserne sous',
         'requestPickUp': 'Demander un ramassage',
         'deliveryStatusDate': '03 Mar. 2025',
-
-
-
-
-
       },
     };
 
@@ -153,49 +143,81 @@ class AppStrings {
 
   // strings for home page
   String get homeAppBarText => _localizedStrings['homeAppBarText']!;
-  String get homeAppBarSubText  => _localizedStrings['homeAppBarSubText']!;
-  String get yourBalance  => _localizedStrings['yourBalance']!;
-  String get topUpBtn  => _localizedStrings['topUpBtn']!;
-  String get balanceWholeNumber  => _localizedStrings['balanceWholeNumber']!;
+
+  String get homeAppBarSubText => _localizedStrings['homeAppBarSubText']!;
+
+  String get yourBalance => _localizedStrings['yourBalance']!;
+
+  String get topUpBtn => _localizedStrings['topUpBtn']!;
+
+  String get balanceWholeNumber => _localizedStrings['balanceWholeNumber']!;
+
   String get balanceDecimal => _localizedStrings['balanceDecimal']!;
+
   String get newTrackBtnText => _localizedStrings['newTrackBtnText']!;
+
   String get orderUsBtnText => _localizedStrings['orderUsBtnText']!;
-  String get currentTrackingText=> _localizedStrings['currentTrackingText']!;
-  String get seeAllText=> _localizedStrings['seeAllText']!;
-  String get searchText=> _localizedStrings['searchText']!;
-  String get idNumberText=> _localizedStrings['idNumberText']!;
-  String get idNumber=> _localizedStrings['idNumber']!;
-  String get locationText=> _localizedStrings['locationText']!;
-  String get locationSubText=> _localizedStrings['locationSubText']!;
-  String get homeTabBarText1=> _localizedStrings['homeTabBarText1']!;
-  String get homeTabBarText2=> _localizedStrings['homeTabBarText2']!;
-  String get homeTabBarText3=> _localizedStrings['homeTabBarText3']!;
-  String get homeTabBarText4=> _localizedStrings['homeTabBarText4']!;
 
+  String get currentTrackingText => _localizedStrings['currentTrackingText']!;
 
+  String get seeAllText => _localizedStrings['seeAllText']!;
+
+  String get searchText => _localizedStrings['searchText']!;
+
+  String get idNumberText => _localizedStrings['idNumberText']!;
+
+  String get idNumber => _localizedStrings['idNumber']!;
+
+  String get locationText => _localizedStrings['locationText']!;
+
+  String get locationSubText => _localizedStrings['locationSubText']!;
+
+  String get homeTabBarText1 => _localizedStrings['homeTabBarText1']!;
+
+  String get homeTabBarText2 => _localizedStrings['homeTabBarText2']!;
+
+  String get homeTabBarText3 => _localizedStrings['homeTabBarText3']!;
+
+  String get homeTabBarText4 => _localizedStrings['homeTabBarText4']!;
 
   /// package details screen
-  String get packageDetailsAppBarTitle=> _localizedStrings['packageDetailsAppBarTitle']!;
-  String get from=> _localizedStrings['from']!;
-  String get to=> _localizedStrings['to']!;
-  String get shipperName=> _localizedStrings['shipperName']!;
-  String get recipientName=> _localizedStrings['recipientName']!;
-  String get deliveryType=> _localizedStrings['deliveryType']!;
-  String get weight=> _localizedStrings['weight']!;
-  String get regular=> _localizedStrings['regular']!;
-  String get stayUpdatedText=> _localizedStrings['stayUpdatedText']!;
-  String get liveTrackingBtnText=> _localizedStrings['liveTrackingBtnText']!;
-  String get detailsStatus=> _localizedStrings['detailsStatus']!;
-  String get transit=> _localizedStrings['transit']!;
-  String get delivery=> _localizedStrings['delivery']!;
-  String get arriveAtSortingCenter=> _localizedStrings['arriveAtSortingCenter']!;
-  String get barracksUnder=> _localizedStrings['barracksUnder']!;
-  String get requestPickUp=> _localizedStrings['requestPickUp']!;
-  String get deliveryStatusDate=> _localizedStrings['deliveryStatusDate']!;
+  String get packageDetailsAppBarTitle =>
+      _localizedStrings['packageDetailsAppBarTitle']!;
 
+  String get from => _localizedStrings['from']!;
+
+  String get to => _localizedStrings['to']!;
+
+  String get shipperName => _localizedStrings['shipperName']!;
+
+  String get recipientName => _localizedStrings['recipientName']!;
+
+  String get deliveryType => _localizedStrings['deliveryType']!;
+
+  String get weight => _localizedStrings['weight']!;
+
+  String get regular => _localizedStrings['regular']!;
+
+  String get stayUpdatedText => _localizedStrings['stayUpdatedText']!;
+
+  String get liveTrackingBtnText => _localizedStrings['liveTrackingBtnText']!;
+
+  String get detailsStatus => _localizedStrings['detailsStatus']!;
+
+  String get transit => _localizedStrings['transit']!;
+
+  String get delivery => _localizedStrings['delivery']!;
+
+  String get arriveAtSortingCenter =>
+      _localizedStrings['arriveAtSortingCenter']!;
+
+  String get barracksUnder => _localizedStrings['barracksUnder']!;
+
+  String get requestPickUp => _localizedStrings['requestPickUp']!;
+
+  String get deliveryStatusDate => _localizedStrings['deliveryStatusDate']!;
 
   static AppStrings of(BuildContext context) {
     return Localizations.of<AppStrings>(context, AppStrings)!;
   }
-
 }

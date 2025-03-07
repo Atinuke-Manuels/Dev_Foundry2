@@ -18,7 +18,10 @@ class BalanceCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(strings.yourBalance, style: TextStyle(fontSize: smallFontSize),),
+            Text(
+              strings.yourBalance,
+              style: TextStyle(fontSize: smallFontSize),
+            ),
             SizedBox(height: smallSpacing),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -26,53 +29,64 @@ class BalanceCard extends StatelessWidget {
                 Text.rich(
                   TextSpan(
                     text: strings.balanceWholeNumber,
-                      style: TextStyle(fontSize: extraLargeHeaderFontSize, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: extraLargeHeaderFontSize,
+                        fontWeight: FontWeight.bold),
                     children: [
                       TextSpan(
                         text: strings.balanceDecimal, // Second part
-                        style: TextStyle(color: colorGrey, fontSize: extraLargeHeaderFontSize, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            color: colorGrey,
+                            fontSize: extraLargeHeaderFontSize,
+                            fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
                   maxLines: 1, // Limits text to 1 line
                   overflow: TextOverflow.ellipsis,
                 ),
-                SmallBtnWithIcon(strings: strings, title: strings.topUpBtn, icon: Icons.chevron_right,),
+                SmallBtnWithIcon(
+                  strings: strings,
+                  title: strings.topUpBtn,
+                  icon: Icons.chevron_right,
+                ),
               ],
             ),
             SizedBox(height: spacing),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width*0.4,
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: smallBtnColor,
-                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                  ),
-                  onPressed: () {},
-                  child: Row(
-                    spacing: 6,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.view_in_ar, color: bottomTabActiveColor),
-                      Text(
-                        strings.newTrackBtnText,
-                        style: TextStyle(color: colorBlack, fontSize: smallFontSize),
-                        overflow: TextOverflow.ellipsis,
-                      ),
-
-                    ],
-                  ),
-                ),
-              ),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width*0.4,
+                  width: MediaQuery.of(context).size.width * 0.4,
                   child: TextButton(
                     style: TextButton.styleFrom(
                       backgroundColor: smallBtnColor,
-                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                    ),
+                    onPressed: () {},
+                    child: Row(
+                      spacing: 6,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.view_in_ar, color: bottomTabActiveColor),
+                        Text(
+                          strings.newTrackBtnText,
+                          style: TextStyle(
+                              color: colorBlack, fontSize: smallFontSize),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: smallBtnColor,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                     ),
                     onPressed: () {},
                     child: Row(
@@ -82,24 +96,19 @@ class BalanceCard extends StatelessWidget {
                         Icon(Icons.gite_rounded, color: bottomTabActiveColor),
                         Text(
                           strings.orderUsBtnText,
-                          style: TextStyle(color: colorBlack, fontSize: smallFontSize),
+                          style: TextStyle(
+                              color: colorBlack, fontSize: smallFontSize),
                           overflow: TextOverflow.ellipsis,
                         ),
-
                       ],
                     ),
                   ),
                 ),
-            ],),
+              ],
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
-
-
-
-

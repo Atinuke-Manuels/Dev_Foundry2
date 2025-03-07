@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../../../constants/constants.dart';
 
-
-class PackageDetailsAppBar extends StatelessWidget implements PreferredSizeWidget {
+class PackageDetailsAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
   const PackageDetailsAppBar({super.key});
 
   @override
@@ -12,7 +12,7 @@ class PackageDetailsAppBar extends StatelessWidget implements PreferredSizeWidge
     final strings = AppStrings();
 
     return AppBar(
-      backgroundColor: scaffoldBackgroundColor,
+      backgroundColor: Colors.transparent,
       leading: Padding(
         padding: const EdgeInsets.only(top: 10, bottom: 10, left: 16),
         child: CircleAvatar(
@@ -25,8 +25,8 @@ class PackageDetailsAppBar extends StatelessWidget implements PreferredSizeWidge
       ),
       title: Text(
         strings.packageDetailsAppBarTitle,
-        style:
-        TextStyle(fontSize: extraLargeFontSize, fontWeight: FontWeight.normal),
+        style: TextStyle(
+            fontSize: extraLargeFontSize, fontWeight: FontWeight.normal),
       ),
       centerTitle: true,
       actions: [
@@ -35,13 +35,14 @@ class PackageDetailsAppBar extends StatelessWidget implements PreferredSizeWidge
           child: CircleAvatar(
               backgroundColor: lowerCardColor,
               child:
-              IconButton(onPressed: () {}, icon: Icon(Icons.more_horiz))),
+                  IconButton(onPressed: () {}, icon: Icon(Icons.more_horiz))),
         )
       ],
     );
   }
 
   @override
+
   /// this helps to get the preferred app bar height
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

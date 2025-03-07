@@ -13,22 +13,28 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: scaffoldBackgroundColor,
       // backgroundColor: Colors.black,
       leading: Padding(
-        padding: const EdgeInsets.only( top: 10, bottom: 10, left: 16),
+        padding: const EdgeInsets.only(top: 10, bottom: 10, left: 16),
         child: CircleAvatar(child: Image.asset('assets/profile.png')),
       ),
       title: Padding(
-        padding: const EdgeInsets.only( top: 10, bottom: 10),
+        padding: const EdgeInsets.only(top: 10, bottom: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(strings.homeAppBarText, style: TextStyle(fontSize: headerFontSize, fontWeight: FontWeight.normal),),
+            Text(
+              strings.homeAppBarText,
+              style: TextStyle(
+                  fontSize: headerFontSize, fontWeight: FontWeight.normal),
+            ),
             Row(
               spacing: 10,
               children: [
                 Text(
                   strings.homeAppBarSubText,
-                  style:
-                  TextStyle(fontSize: tinyFontSize, fontWeight: FontWeight.normal, color: colorGrey),
+                  style: TextStyle(
+                      fontSize: tinyFontSize,
+                      fontWeight: FontWeight.normal,
+                      color: colorGrey),
                 ),
                 Icon(Icons.keyboard_arrow_down)
               ],
@@ -49,6 +55,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
+
   /// this helps to get the preferred app bar height
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

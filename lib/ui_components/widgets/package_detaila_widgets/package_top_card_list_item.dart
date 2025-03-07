@@ -10,20 +10,23 @@ class PackageTopCardListItem extends StatelessWidget {
   final String trailingSubTitle;
   final String trailingSubTitle2;
 
-  const PackageTopCardListItem(
-      {super.key,
-        required this.leadingTitle,
-        required this.leadingSubTitle,
-        required this.leadingSubTitle2,
-        required this.trailingTitle,
-        required this.trailingSubTitle,
-        required this.trailingSubTitle2,
-      });
+  const PackageTopCardListItem({
+    super.key,
+    required this.leadingTitle,
+    required this.leadingSubTitle,
+    required this.leadingSubTitle2,
+    required this.trailingTitle,
+    required this.trailingSubTitle,
+    required this.trailingSubTitle2,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 24,),
+      padding: const EdgeInsets.only(
+        left: 20,
+        right: 24,
+      ),
       child: ListTile(
         leading: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,15 +36,20 @@ class PackageTopCardListItem extends StatelessWidget {
               style: TextStyle(color: colorGrey, fontSize: tinyFontSize),
               overflow: TextOverflow.ellipsis,
             ),
-            Text.rich(TextSpan(
-                text: leadingSubTitle,
-                style: TextStyle(color: colorBlack, fontSize: smallFontSize),
-                children: [TextSpan(
-                  text: leadingSubTitle2,
+            Text.rich(
+              TextSpan(
+                  text: leadingSubTitle,
                   style: TextStyle(color: colorBlack, fontSize: smallFontSize),
-                )]
-            ), maxLines: 1, // Limits text to 1 line
-              overflow: TextOverflow.ellipsis,),
+                  children: [
+                    TextSpan(
+                      text: leadingSubTitle2,
+                      style:
+                          TextStyle(color: colorBlack, fontSize: smallFontSize),
+                    )
+                  ]),
+              maxLines: 1, // Limits text to 1 line
+              overflow: TextOverflow.ellipsis,
+            ),
           ],
         ),
         trailing: Column(
@@ -56,12 +64,16 @@ class PackageTopCardListItem extends StatelessWidget {
               TextSpan(
                   text: trailingSubTitle,
                   style: TextStyle(color: colorBlack, fontSize: smallFontSize),
-                  children: [TextSpan(
-                    text: trailingSubTitle2,
-                    style: TextStyle(color: colorBlack, fontSize: smallFontSize),
-                  )]
-              ), maxLines: 1, // Limits text to 1 line
-              overflow: TextOverflow.ellipsis,),
+                  children: [
+                    TextSpan(
+                      text: trailingSubTitle2,
+                      style:
+                          TextStyle(color: colorBlack, fontSize: smallFontSize),
+                    )
+                  ]),
+              maxLines: 1, // Limits text to 1 line
+              overflow: TextOverflow.ellipsis,
+            ),
           ],
         ),
       ),

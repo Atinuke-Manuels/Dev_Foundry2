@@ -37,6 +37,7 @@ class BottomTabListItem extends StatelessWidget {
           child: Icon(
             Icons.fire_truck_outlined,
             size: 20,
+            color: colorBlack,
           )),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,6 +87,7 @@ class BottomTabListItem extends StatelessWidget {
           child: Icon(
             Icons.chevron_right,
             size: 30,
+            color: colorBlack,
           )),
     );
   }

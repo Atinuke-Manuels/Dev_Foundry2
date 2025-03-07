@@ -4,7 +4,6 @@ import 'package:dev_foundry_task/ui_components/screens/package_details_screen.da
 
 import '../../constants/constants.dart';
 
-
 class BottomNavScreen extends StatefulWidget {
   const BottomNavScreen({super.key});
 
@@ -37,7 +36,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     return Scaffold(
       body: _screens[_selectedIndex],
       bottomNavigationBar: Container(
-        height: screenHeight > 500 ? screenHeight*0.08 : screenHeight*0.18,
+        height: screenHeight > 500 ? screenHeight * 0.08 : screenHeight * 0.18,
         margin: EdgeInsets.only(left: 50, right: 50, bottom: 20),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -71,10 +70,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
       child: Container(
         padding: EdgeInsets.all(10),
         decoration: isSelected
-            ? BoxDecoration(
-            color: bottomTabActiveColor,
-            shape: BoxShape.circle
-        )
+            ? BoxDecoration(color: bottomTabActiveColor, shape: BoxShape.circle)
             : null,
         child: Icon(
           icon,

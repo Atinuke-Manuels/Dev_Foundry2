@@ -13,33 +13,36 @@ class CustomSearchBar extends StatelessWidget {
 
     return TextField(
       decoration: InputDecoration(
-          filled: true,
-          fillColor: scaffoldBackgroundColor,
-          enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.transparent),
-            borderRadius: BorderRadius.circular(40)
-          ),
-          border: OutlineInputBorder(
+        filled: true,
+        fillColor: scaffoldBackgroundColor,
+        enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.transparent),
+            borderRadius: BorderRadius.circular(40)),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(40),
+        ),
+        focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(40),
-          ),
-          focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(40),
-              borderSide: BorderSide(color: Theme.of(context).primaryColor)
-          ),
-          contentPadding: const EdgeInsets.symmetric(
-            vertical: 12,
-            horizontal: 16,
-          ),
-          hintText: strings.searchText,
-          hintStyle: TextStyle(color: colorGrey),
-          prefixIcon: const Icon(Icons.search, size: 21, color: greyTextColor,),
+            borderSide: BorderSide(color: Theme.of(context).primaryColor)),
+        contentPadding: const EdgeInsets.symmetric(
+          vertical: 12,
+          horizontal: 16,
+        ),
+        hintText: strings.searchText,
+        hintStyle: TextStyle(color: colorGrey),
+        prefixIcon: const Icon(
+          Icons.search,
+          size: 21,
+          color: greyTextColor,
+        ),
         suffixIcon: Padding(
-          padding: const EdgeInsets.only(right: 6), // Adjust the right padding as needed
-          child: RoundOrangeClickableIcon(icon: Icons.swap_horiz,),
+          padding: const EdgeInsets.only(right: 6),
+          // Adjust the right padding as needed
+          child: RoundOrangeClickableIcon(
+            icon: Icons.swap_horiz,
+          ),
         ),
       ),
     );
   }
 }
-
-

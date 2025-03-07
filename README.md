@@ -1,16 +1,35 @@
-# dev_foundry_task
+## 📦 Package Tracking App
 
-A new Flutter project.
+A modern and minimalistic **package tracking app UI**, designed using **Flutter**. This project consists of two key screens:
 
-## Getting Started
+- **Home Screen**: Displays balance, tracking status, and active shipments.
+- **Package Details Screen**: Shows shipment details, tracking updates, and live tracking functionality.
 
-This project is a starting point for a Flutter application.
+### Features
+✅ Responsive & clean UI  
+✅ Localized in English, French & Spanish  
+✅ Light theme with soft orange accents  
+✅ Shipment status updates  
+✅ Live tracking button
 
-A few resources to get you started if this is your first Flutter project:
+### Tech Stack
+- **Flutter** (Dart)
+- **Material Design**
+- **Custom UI Components**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Screenshots
+<img src="your-image-path.jpeg" width="600">  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Getting Started
+Clone the repository:
+```bash
+git clone https://github.com/yourusername/package-tracking-app.git
+```
+Run the app:
+```bash
+flutter pub get
+flutter run
+```
+
+### Credits
+Developed by **Atinuke@developerfoundryfellow2025**.

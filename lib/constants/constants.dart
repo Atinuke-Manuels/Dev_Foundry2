@@ -11,14 +11,10 @@ const scaffoldBackgroundColor = Colors.white;
 const colorGrey = Colors.grey;
 const colorBlack = Colors.black;
 
-
-
-
 const defaultPadding = 24.0;
 const smallSpacing = 10.0;
 const spacing = 14.0;
 const bigSpacing = 28.0;
-
 
 const tinyFontSize = 10.0;
 const smallFontSize = 12.0;
@@ -27,5 +23,3 @@ const largeFontSize = 16.0;
 const headerFontSize = 20.0;
 const extraLargeFontSize = 24.0;
 const extraLargeHeaderFontSize = 36.0;
-
-

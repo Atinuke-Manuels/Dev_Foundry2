@@ -24,13 +24,15 @@ class SmallBtnWithIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicWidth(  // Ensures the button only takes required space
+    return IntrinsicWidth(
+      // Ensures the button only takes required space
       child: SizedBox(
         height: 25,
         child: TextButton(
           style: TextButton.styleFrom(
             backgroundColor: btnColor,
-            padding: EdgeInsets.symmetric(horizontal: 8), // Adjust for responsiveness
+            padding: EdgeInsets.symmetric(
+                horizontal: 8), // Adjust for responsiveness
           ),
           onPressed: onTap,
           child: Row(

@@ -32,7 +32,8 @@ class PackageDetailsTopCard extends StatelessWidget {
                     children: [
                       Text(
                         strings.idNumberText,
-                        style: TextStyle(fontSize: smallFontSize, color: colorGrey),
+                        style: TextStyle(
+                            fontSize: smallFontSize, color: colorGrey),
                         overflow: TextOverflow.ellipsis,
                       ),
                       SmallBtnWithIcon(
@@ -49,26 +50,25 @@ class PackageDetailsTopCard extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 26, right: 30, top: 12, bottom: 24),
+              padding: const EdgeInsets.only(
+                  left: 26, right: 30, top: 12, bottom: 24),
               child: DashedDivider(color: colorGrey),
             ),
-      Column(
-        children: packageDetails.map((details) {
-          return PackageTopCardListItem(
-            leadingTitle: details['leadingTitle'] ?? '',
-            leadingSubTitle: details['leadingSubTitle'] ?? '',
-            leadingSubTitle2: details['leadingSubTitle2'] ?? '',
-            trailingTitle: details['trailingTitle'] ?? '',
-            trailingSubTitle: details['trailingSubTitle'] ?? '',
-            trailingSubTitle2: details['trailingSubTitle2'] ?? '',
-          );
-        }).toList(),
-      )
+            Column(
+              children: packageDetails.map((details) {
+                return PackageTopCardListItem(
+                  leadingTitle: details['leadingTitle'] ?? '',
+                  leadingSubTitle: details['leadingSubTitle'] ?? '',
+                  leadingSubTitle2: details['leadingSubTitle2'] ?? '',
+                  trailingTitle: details['trailingTitle'] ?? '',
+                  trailingSubTitle: details['trailingSubTitle'] ?? '',
+                  trailingSubTitle2: details['trailingSubTitle2'] ?? '',
+                );
+              }).toList(),
+            )
           ],
         ),
       ),
     );
   }
 }
-
-

@@ -22,9 +22,13 @@ class PackageDetailsScreen extends StatelessWidget {
           children: [
             // SizedBox(height: spacing),
             PackageDetailsTopCard(),
-            SizedBox(height: bigSpacing,),
+            SizedBox(
+              height: bigSpacing,
+            ),
             PackageDetailsScreenMiddleCard(),
-            SizedBox(height: spacing,),
+            SizedBox(
+              height: spacing,
+            ),
             PackageDetailsScreenBottomCard()
           ],
         ),
