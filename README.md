@@ -17,9 +17,10 @@ A modern and minimalistic **package tracking app UI**, designed using **Flutter*
 - **Material Design**
 - **Custom UI Components**
 
-### Screenshots 
-- ![Package_home_screen](https://github.com/user-attachments/assets/32b913de-ab95-447e-a7fe-19d24d1f6e53)
-- ![package_details_screen](https://github.com/user-attachments/assets/44a34b6a-bf4c-4f37-99b3-537e5d1f2a9e)
+### Screenshots
+<img src="https://github.com/user-attachments/assets/32b913de-ab95-447e-a7fe-19d24d1f6e53" width="300" height="auto" alt="Home Screen">  
+<img src="https://github.com/user-attachments/assets/44a34b6a-bf4c-4f37-99b3-537e5d1f2a9e" width="300" height="auto" alt="Package details screen">
+
 
 ### Getting Started
 Clone the repository:
